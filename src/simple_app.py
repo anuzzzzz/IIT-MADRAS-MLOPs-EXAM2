@@ -1,9 +1,13 @@
 from flask import Flask, request, jsonify
 import pandas as pd
-import numpy as np
 import logging
 import time
-from model_training import HeartDiseasePredictor
+import os
+import sys
+
+# Add parent directory to path
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+from src.model_training import HeartDiseasePredictor
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -12,14 +16,12 @@ app = Flask(__name__)
 
 # Load model at startup
 predictor = HeartDiseasePredictor()
-
-@app.before_first_request
-def load_model():
-    try:
-        predictor.load_model('models')
-        logger.info("Model loaded successfully")
-    except Exception as e:
-        logger.error(f"Failed to load model: {e}")
+try:
+    model_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'models')
+    predictor.load_model(model_path)
+    logger.info("Model loaded successfully")
+except Exception as e:
+    logger.error(f"Failed to load model: {e}")
 
 @app.route('/health', methods=['GET'])
 def health():
@@ -32,10 +34,7 @@ def predict():
         if not data:
             return jsonify({'error': 'No data provided'}), 400
         
-        # Convert to DataFrame
         input_data = pd.DataFrame([data])
-        
-        # Make prediction
         prediction, probability = predictor.predict(input_data)
         
         response = {
@@ -54,4 +53,4 @@ def predict():
         return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080, debug=True)
+    app.run(host='0.0.0.0', port=8081, debug=True)

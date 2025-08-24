@@ -1,0 +1,16 @@
+FAIRNESS ANALYSIS REPORT (Enhanced with Fairlearn)
+====================================================
+
+FAIRLEARN METRICS:
+Demographic Parity Difference: 0.2724
+Equalized Odds Difference: 0.1273
+
+GENDER-BASED PERFORMANCE:
+Male accuracy: 0.8049 (n=41)
+Female accuracy: 0.8889 (n=18)
+Accuracy difference: 0.0840
+
+INTERPRETATION:
+Demographic Parity: ⚠ Bias detected
+Equalized Odds: ⚠ Bias detected
+Overall: ✓ Fair performance across genders
