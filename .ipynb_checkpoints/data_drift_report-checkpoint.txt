@@ -1,0 +1,93 @@
+DATA DRIFT ANALYSIS REPORT
+========================================
+
+STATISTICAL COMPARISON:
+-------------------------
+
+age:
+  Original: μ=54.35, σ=9.18
+  Generated: μ=53.63, σ=17.57
+  Drift Score: 0.496
+  ⚠️  SIGNIFICANT DRIFT DETECTED
+
+gender:
+  Original: μ=0.31, σ=0.46
+  Generated: μ=0.43, σ=0.50
+  Drift Score: 0.166
+  ✅ No significant drift
+
+cp:
+  Original: μ=0.97, σ=1.03
+  Generated: μ=1.53, σ=1.12
+  Drift Score: 0.317
+  ⚠️  SIGNIFICANT DRIFT DETECTED
+
+trestbps:
+  Original: μ=131.68, σ=17.66
+  Generated: μ=146.37, σ=32.13
+  Drift Score: 0.826
+  ⚠️  SIGNIFICANT DRIFT DETECTED
+
+chol:
+  Original: μ=246.18, σ=51.41
+  Generated: μ=278.26, σ=77.78
+  Drift Score: 0.569
+  ⚠️  SIGNIFICANT DRIFT DETECTED
+
+fbs:
+  Original: μ=0.15, σ=0.35
+  Generated: μ=0.50, σ=0.50
+  Drift Score: 0.707
+  ⚠️  SIGNIFICANT DRIFT DETECTED
+
+restecg:
+  Original: μ=0.52, σ=0.53
+  Generated: μ=0.99, σ=0.83
+  Drift Score: 0.739
+  ⚠️  SIGNIFICANT DRIFT DETECTED
+
+thalach:
+  Original: μ=149.88, σ=22.64
+  Generated: μ=126.97, σ=40.12
+  Drift Score: 0.892
+  ⚠️  SIGNIFICANT DRIFT DETECTED
+
+exang:
+  Original: μ=0.33, σ=0.47
+  Generated: μ=0.52, σ=0.50
+  Drift Score: 0.233
+  ⚠️  SIGNIFICANT DRIFT DETECTED
+
+oldpeak:
+  Original: μ=1.05, σ=1.17
+  Generated: μ=2.97, σ=1.76
+  Drift Score: 1.067
+  ⚠️  SIGNIFICANT DRIFT DETECTED
+
+slope:
+  Original: μ=1.39, σ=0.62
+  Generated: μ=0.89, σ=0.80
+  Drift Score: 0.554
+  ⚠️  SIGNIFICANT DRIFT DETECTED
+
+ca:
+  Original: μ=0.73, σ=1.03
+  Generated: μ=1.55, σ=1.10
+  Drift Score: 0.430
+  ⚠️  SIGNIFICANT DRIFT DETECTED
+
+thal:
+  Original: μ=2.32, σ=0.61
+  Generated: μ=1.48, σ=1.09
+  Drift Score: 1.072
+  ⚠️  SIGNIFICANT DRIFT DETECTED
+
+SUMMARY:
+Features with significant drift: 12
+Drifted features: ['age', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal']
+
+⚠️  DATA DRIFT DETECTED!
+Recommendations:
+- Monitor model performance closely
+- Consider retraining with recent data
+- Implement drift detection in production

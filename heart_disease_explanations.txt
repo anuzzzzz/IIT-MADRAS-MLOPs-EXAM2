@@ -1,3 +1,66 @@
 HEART DISEASE PREDICTION EXPLANATIONS
 ==================================================
 
+This analysis explains why the model predicts heart disease
+for specific patient samples using SHAP values.
+
+Sample 1 Analysis:
+Prediction: Heart Disease
+Confidence: 63.41%
+
+Key factors influencing this prediction:
+1. cp = 3.0 (increases risk by 1.466)
+2. slope = 0.0 (decreases risk by 0.578)
+3. fbs = 1.0 (decreases risk by 0.546)
+4. thal = 1.0 (increases risk by 0.421)
+5. gender = 0.0 (decreases risk by 0.360)
+
+------------------------------
+Sample 2 Analysis:
+Prediction: Heart Disease
+Confidence: 65.25%
+
+Key factors influencing this prediction:
+1. oldpeak = 3.5 (decreases risk by 1.034)
+2. slope = 0.0 (decreases risk by 0.578)
+3. cp = 2.0 (increases risk by 0.550)
+4. gender = 0.0 (decreases risk by 0.360)
+5. thal = 2.0 (decreases risk by 0.281)
+
+------------------------------
+Sample 3 Analysis:
+Prediction: Heart Disease
+Confidence: 96.20%
+
+Key factors influencing this prediction:
+1. gender = 1.0 (increases risk by 1.442)
+2. slope = 2.0 (increases risk by 0.578)
+3. cp = 1.0 (decreases risk by 0.367)
+4. restecg = 0.0 (decreases risk by 0.338)
+5. thal = 2.0 (decreases risk by 0.281)
+
+------------------------------
+Sample 4 Analysis:
+Prediction: Heart Disease
+Confidence: 89.45%
+
+Key factors influencing this prediction:
+1. slope = 2.0 (increases risk by 0.578)
+2. oldpeak = 0.8 (increases risk by 0.500)
+3. cp = 1.0 (decreases risk by 0.367)
+4. gender = 0.0 (decreases risk by 0.360)
+5. thal = 2.0 (decreases risk by 0.281)
+
+------------------------------
+Sample 5 Analysis:
+Prediction: Heart Disease
+Confidence: 74.10%
+
+Key factors influencing this prediction:
+1. cp = 0.0 (decreases risk by 1.283)
+2. oldpeak = 0.4 (increases risk by 0.727)
+3. thal = 1.0 (increases risk by 0.421)
+4. gender = 0.0 (decreases risk by 0.360)
+5. thalach = 148.0 (decreases risk by 0.249)
+
+------------------------------
