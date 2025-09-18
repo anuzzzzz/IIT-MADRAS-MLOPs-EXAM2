@@ -323,16 +323,12 @@ gcloud container images delete gcr.io/$PROJECT_ID/heart-disease-predictor:latest
 4. **API Timeouts:** Implement proper error handling and retry logic
 5. **wrk Installation:** Use `sudo apt-get install wrk` on Ubuntu/Debian
 
-## Repository Access
 
-- **Repository:** `https://github.com/anuzzzzz/21F2000400_IITMBS_MLOPS_OPPE2`
-- **Visibility:** Private
-- **Collaborator:** IITMBSMLOps (da5014_1@study.iitm.ac.in)
 
 ## Contact
 
 For evaluation, queries, or repository access issues:
-- **Course Staff:** da5014_1@study.iitm.ac.in
+
 - **Student:** 21F2000400
 
 ---
